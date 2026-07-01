@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../components/NavBar.jsx";
 import TaskCard from "../components/TaskCard.jsx";
 import TaskForm from "../components/TaskForm.jsx";
 import { taskService } from "../services/task.service.js";
