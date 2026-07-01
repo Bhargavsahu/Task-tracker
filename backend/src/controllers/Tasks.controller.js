@@ -44,6 +44,8 @@ const updateTask = asyncHandler(async (req, res) => {
     throw new apiError(400, "Request body is required");
   }
 
+  const { title, description, priority, status } = req.body;
+
   if (
     title === undefined &&
     description === undefined &&
@@ -52,8 +54,6 @@ const updateTask = asyncHandler(async (req, res) => {
   ) {
     throw new apiError(400, "Provide at least one field to update");
   }
-
-  const { title, description, priority, status } = req.body;
 
   const updateFields = {};
 
